@@ -1,0 +1,42 @@
+databaseChangeLog:
+  - changeSet:
+      id: create-StatusVoo-table
+      author: tonipimentel
+      changes:
+        - createTable:
+            tableName: StatusVoo
+            columns:
+              - column:
+                  name: StatusVooID
+                  type: int
+                  autoIncrement: true
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: Nome
+                  type: varchar(500)
+                  constraints:
+                    nullable: false
+  - changeSet:
+      id: insert-StatusVoos
+      author: tonipimentel
+      changes:
+        - insert:
+            tableName: StatusVoo
+            columns:
+              - column:
+                  name: StatusVooID
+                  value: 1
+              - column:
+                  name: Nome
+                  value: "Estacionado"
+        - insert:
+            tableName: StatusVoo
+            columns:
+              - column:
+                  name: StatusVooID
+                  value: 2
+              - column:
+                  name: Nome
+                  value: "Voando"

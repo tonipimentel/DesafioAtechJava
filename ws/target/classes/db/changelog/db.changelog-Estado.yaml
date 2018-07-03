@@ -1,0 +1,353 @@
+databaseChangeLog:
+  - changeSet:
+      id: create-Estado-table
+      author: tonipimentel
+      changes:
+        - createTable:
+            tableName: Estado
+            columns:
+              - column:
+                  name: EstadoID
+                  type: int
+                  autoIncrement: true
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: Nome
+                  type: varchar(500)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: Sigla
+                  type: varchar(10)
+                  constraints:
+                    nullable: false
+  - changeSet:
+      id: insert-Estados
+      author: tonipimentel
+      changes:
+        - insert:
+            tableName: Estado
+            columns:
+              - column:
+                  name: EstadoID
+                  value: 1
+              - column:
+                  name: Nome
+                  value: "Acre"
+              - column:
+                  name: Sigla
+                  value: "AC"
+        - insert:
+            tableName: Estado
+            columns:
+              - column:
+                  name: EstadoID
+                  value: 2
+              - column:
+                  name: Nome
+                  value: "Alagoas"
+              - column:
+                  name: Sigla
+                  value: "AL"
+        - insert:
+            tableName: Estado
+            columns:
+              - column:
+                  name: EstadoID
+                  value: 3
+              - column:
+                  name: Nome
+                  value: "Amazonas"
+              - column:
+                  name: Sigla
+                  value: "AM"
+        - insert:
+            tableName: Estado
+            columns:
+              - column:
+                  name: EstadoID
+                  value: 4
+              - column:
+                  name: Nome
+                  value: "Amapá"
+              - column:
+                  name: Sigla
+                  value: "AP"
+        - insert:
+            tableName: Estado
+            columns:
+              - column:
+                  name: EstadoID
+                  value: 5
+              - column:
+                  name: Nome
+                  value: "Bahia"
+              - column:
+                  name: Sigla
+                  value: "BA"
+        - insert:
+            tableName: Estado
+            columns:
+              - column:
+                  name: EstadoID
+                  value: 6
+              - column:
+                  name: Nome
+                  value: "Ceará"
+              - column:
+                  name: Sigla
+                  value: "CE"
+        - insert:
+            tableName: Estado
+            columns:
+              - column:
+                  name: EstadoID
+                  value: 7
+              - column:
+                  name: Nome
+                  value: "Distrito Federal"
+              - column:
+                  name: Sigla
+                  value: "DF"
+        - insert:
+            tableName: Estado
+            columns:
+              - column:
+                  name: EstadoID
+                  value: 8
+              - column:
+                  name: Nome
+                  value: "Espírito Santo"
+              - column:
+                  name: Sigla
+                  value: "ES"
+        - insert:
+            tableName: Estado
+            columns:
+              - column:
+                  name: EstadoID
+                  value: 9
+              - column:
+                  name: Nome
+                  value: "Goiás"
+              - column:
+                  name: Sigla
+                  value: "GO"
+        - insert:
+            tableName: Estado
+            columns:
+              - column:
+                  name: EstadoID
+                  value: 10
+              - column:
+                  name: Nome
+                  value: "Maranhão"
+              - column:
+                  name: Sigla
+                  value: "MA"
+        - insert:
+            tableName: Estado
+            columns:
+              - column:
+                  name: EstadoID
+                  value: 11
+              - column:
+                  name: Nome
+                  value: "Minas Gerais"
+              - column:
+                  name: Sigla
+                  value: "MG"
+        - insert:
+            tableName: Estado
+            columns:
+              - column:
+                  name: EstadoID
+                  value: 12
+              - column:
+                  name: Nome
+                  value: "Mato Grosso do Sul"
+              - column:
+                  name: Sigla
+                  value: "MS"
+        - insert:
+            tableName: Estado
+            columns:
+              - column:
+                  name: EstadoID
+                  value: 13
+              - column:
+                  name: Nome
+                  value: "Mato Grosso"
+              - column:
+                  name: Sigla
+                  value: "MT"
+        - insert:
+            tableName: Estado
+            columns:
+              - column:
+                  name: EstadoID
+                  value: 14
+              - column:
+                  name: Nome
+                  value: "Pará"
+              - column:
+                  name: Sigla
+                  value: "PA"
+        - insert:
+            tableName: Estado
+            columns:
+              - column:
+                  name: EstadoID
+                  value: 15
+              - column:
+                  name: Nome
+                  value: "Paraíba"
+              - column:
+                  name: Sigla
+                  value: "PB"
+        - insert:
+            tableName: Estado
+            columns:
+              - column:
+                  name: EstadoID
+                  value: 16
+              - column:
+                  name: Nome
+                  value: "Pernambuco"
+              - column:
+                  name: Sigla
+                  value: "PE"
+        - insert:
+            tableName: Estado
+            columns:
+              - column:
+                  name: EstadoID
+                  value: 17
+              - column:
+                  name: Nome
+                  value: "Piauí"
+              - column:
+                  name: Sigla
+                  value: "PI"
+        - insert:
+            tableName: Estado
+            columns:
+              - column:
+                  name: EstadoID
+                  value: 18
+              - column:
+                  name: Nome
+                  value: "Paraná"
+              - column:
+                  name: Sigla
+                  value: "PR"
+        - insert:
+            tableName: Estado
+            columns:
+              - column:
+                  name: EstadoID
+                  value: 19
+              - column:
+                  name: Nome
+                  value: "Rio de Janeiro"
+              - column:
+                  name: Sigla
+                  value: "RJ"
+        - insert:
+            tableName: Estado
+            columns:
+              - column:
+                  name: EstadoID
+                  value: 20
+              - column:
+                  name: Nome
+                  value: "Rio Grande do Norte"
+              - column:
+                  name: Sigla
+                  value: "RN"
+        - insert:
+            tableName: Estado
+            columns:
+              - column:
+                  name: EstadoID
+                  value: 21
+              - column:
+                  name: Nome
+                  value: "Rondônia"
+              - column:
+                  name: Sigla
+                  value: "RO"
+        - insert:
+            tableName: Estado
+            columns:
+              - column:
+                  name: EstadoID
+                  value: 22
+              - column:
+                  name: Nome
+                  value: "Roraima"
+              - column:
+                  name: Sigla
+                  value: "RR"
+        - insert:
+            tableName: Estado
+            columns:
+              - column:
+                  name: EstadoID
+                  value: 23
+              - column:
+                  name: Nome
+                  value: "Rio Grande do Sul"
+              - column:
+                  name: Sigla
+                  value: "RS"
+        - insert:
+            tableName: Estado
+            columns:
+              - column:
+                  name: EstadoID
+                  value: 24
+              - column:
+                  name: Nome
+                  value: "Santa Catarina"
+              - column:
+                  name: Sigla
+                  value: "SC"
+        - insert:
+            tableName: Estado
+            columns:
+              - column:
+                  name: EstadoID
+                  value: 25
+              - column:
+                  name: Nome
+                  value: "Sergipe"
+              - column:
+                  name: Sigla
+                  value: "SE"
+        - insert:
+            tableName: Estado
+            columns:
+              - column:
+                  name: EstadoID
+                  value: 26
+              - column:
+                  name: Nome
+                  value: "São Paulo"
+              - column:
+                  name: Sigla
+                  value: "SP"
+        - insert:
+            tableName: Estado
+            columns:
+              - column:
+                  name: EstadoID
+                  value: 27
+              - column:
+                  name: Nome
+                  value: "Tocantins"
+              - column:
+                  name: Sigla
+                  value: "TO"

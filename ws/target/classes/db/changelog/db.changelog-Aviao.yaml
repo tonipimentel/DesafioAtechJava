@@ -1,0 +1,42 @@
+databaseChangeLog:
+  - changeSet:
+      id: create-Aviao-table
+      author: tonipimentel
+      changes:
+        - createTable:
+            tableName: Aviao
+            columns:
+              - column:
+                  name: AviaoID
+                  type: int
+                  autoIncrement: true
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: Modelo
+                  type: varchar(500)
+                  constraints:
+                    nullable: false
+  - changeSet:
+      id: insert-Aviaos
+      author: tonipimentel
+      changes:
+        - insert:
+            tableName: Aviao
+            columns:
+              - column:
+                  name: AviaoID
+                  value: 1
+              - column:
+                  name: Modelo
+                  value: "Airbus 1"
+        - insert:
+            tableName: Aviao
+            columns:
+              - column:
+                  name: AviaoID
+                  value: 2
+              - column:
+                  name: Modelo
+                  value: "Boeing 1"

@@ -1,0 +1,55 @@
+databaseChangeLog:
+  - changeSet:
+      id: create-route-table
+      author: tonipimentel
+      changes:
+        - createTable:
+            tableName: ROUTE
+            columns:
+              - column:
+                  name: CidadeID
+                  type: int
+                  autoIncrement: true
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: Nome
+                  type: varchar(500)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: EstadoID
+                  type: int
+                  constraints:
+                    nullable: false
+                    foreignKeyName: FK_Cidade_Estado
+                    references: Estado(EstadoID)
+  - changeSet:
+      id: insert-Cidades
+      author: tonipimentel
+      changes:
+        - insert:
+            tableName: Cidade
+            columns:
+              - column:
+                  name: CidadeID
+                  value: 1
+              - column:
+                  name: Nome
+                  value: "Rio de Janeiro"
+              - column:
+                  name: EstadoID
+                  value: 19
+        - insert:
+            tableName: Cidade
+            columns:
+              - column:
+                  name: CidadeID
+                  value: 2
+              - column:
+                  name: Nome
+                  value: "São Paulo"
+              - column:
+                  name: EstadoID
+                  value: 26

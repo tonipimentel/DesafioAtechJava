@@ -1,0 +1,15 @@
+databaseChangeLog:
+  - property:
+      name: now
+      value: now()
+      dbms: mysql
+  - include:
+      file: /db/changelog/db.changelog-Aviao.yaml
+  - include:
+      file: /db/changelog/db.changelog-Cidade.yaml
+  - include:
+      file: /db/changelog/db.changelog-Estado.yaml
+  - include:
+      file: /db/changelog/db.changelog-StatusVoo.yaml
+  - include:
+      file: /db/changelog/db.changelog-Voo.yaml

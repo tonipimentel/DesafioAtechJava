@@ -1,0 +1,105 @@
+databaseChangeLog:
+  - changeSet:
+      id: create-flight-table
+      author: tonipimentel
+      changes:
+        - createTable:
+            tableName: FLIGHT
+            columns:
+              - column:
+                  name: VooID
+                  type: int
+                  autoIncrement: true
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: StatusVooID
+                  type: int
+                  constraints:
+                    nullable: false
+                    foreignKeyName: FK_Voo_StatusVoo
+                    references: StatusVoo(StatusVooID)
+              - column:
+                  name: AviaoID
+                  type: int
+                  constraints:
+                    nullable: false
+                    foreignKeyName: FK_Voo_Aviao
+                    references: Aviao(AviaoID)
+              - column:
+                  name: Partida
+                  type: date
+                  constraints:
+                    nullable: false
+              - column:
+                  name: Chegada
+                  type: date
+                  constraints:
+                    nullable: false
+              - column:
+                  name: CidadeOrigemID
+                  type: int
+                  constraints:
+                    nullable: false
+                    foreignKeyName: FK_Voo_CidadeOrigem
+                    references: Cidade(CidadeID)
+              - column:
+                  name: CidadeDestinoID
+                  type: int
+                  constraints:
+                    nullable: false
+                    foreignKeyName: FK_Voo_CidadeDestino
+                    references: Cidade(CidadeID)
+  - changeSet:
+      id: insert-Voo
+      author: tonipimentel
+      changes:
+        - insert:
+            tableName: Voo
+            columns:
+              - column:
+                  name: VooID
+                  value: 1
+              - column:
+                  name: StatusVooID
+                  value: 1
+              - column:
+                  name: AviaoID
+                  value: 1
+              - column:
+                  name: Partida
+                  value: ${now}
+              - column:
+                  name: Chegada
+                  value: ${now}
+              - column:
+                  name: CidadeOrigemID
+                  value: 2
+              - column:
+                  name: CidadeDestinoID
+                  value: 1
+        - insert:
+            tableName: Voo
+            columns:
+              - column:
+                  name: VooID
+                  value: 2
+              - column:
+                  name: StatusVooID
+                  value: 1
+              - column:
+                  name: AviaoID
+                  value: 2
+              - column:
+                  name: Partida
+                  value: ${now}
+              - column:
+                  name: Chegada
+                  value: ${now}
+              - column:
+                  name: CidadeOrigemID
+                  value: 1
+              - column:
+                  name: CidadeDestinoID
+                  value: 2
